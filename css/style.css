@@ -1,1 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="script.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nu Yin Win</title>
 
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+   
+    
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+        <div class="logo">
+            Nu Yin Win
+        </div>
+    
+        <ul>
+    
+            <li><a href="index.html">Home</a></li>
+    
+            <li><a href="about.html">About Me</a></li>
+    
+            <li><a href="experience.html">Experience</a></li>
+    
+            <li><a href="projects.html">Projects</a></li>
+
+            <li><a href="volunteer.html">Volunteer</a></li>
+    
+            <li><a href="certifications.html">Certifications</a></li>
+    
+            <li><a href="contact.html">Contact</a></li>
+    
+        </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="hero">
+
+    <div class="container">
+
+    <div class="hero-content">
+    
+           <div class="profile-image">
+
+            <img src="images/profile3.png" alt="Nu Yin Win">
+            
+            </div>
+    
+            <h1>Hi, I'm Nu Yin Win (Julia) 👋</h1>
+    
+            <h2>IT Project Manager | Business Analyst | Enterprise Software Implementation</h2>
+    
+           <p class="tagline">
+            From Vision to Delivery.
+            </p>
+            
+            <p class="description">
+            Results-driven IT professional with 9+ years of experience in enterprise software implementation, business analysis, and project delivery. 
+            
+            </p>
+    
+            <a class="btn"
+               href="documents/nuyinwinResume.pdf"
+               target="_blank"
+               download>
+               View My Resume
+            </a>
+            
+            <a class="btn secondary" href="#projects">
+            Explore Projects
+            </a>
+    
+        </div>
+
+    </div>
+    
+    </section>
+
+    <!-- About -->
+    <section id="about">
+        <div class="container">
+
+        <h2>About Me</h2>
+        
+        <p>
+        Currently serving as an Auxiliary Police Officer in Singapore while continuously strengthening my technical skills and preparing to return to enterprise IT.
+        My career has taken me from software development to IT management, where I successfully delivered enterprise software projects across banking, FMCG, and distribution industries in Myanmar and Cambodia.
+
+        I enjoy solving complex business problems, working with stakeholders, and turning ideas into practical technology solutions. I believe continuous learning, resilience, and a genuine desire to help others are the foundations of long-term success.  
+        
+        </p>
+        
+        </div>
+    </section>
+
+    <section class="stats">
+
+        <div class="container">
+        
+            <div class="stat">
+                <h2>9+</h2>
+                <p>Years Experience</p>
+            </div>
+        
+            <div class="stat">
+                <h2>7+</h2>
+                <p>Enterprise Clients</p>
+            </div>
+        
+            <div class="stat">
+                <h2>900+</h2>
+                <p>Users Supported</p>
+            </div>
+        
+            <div class="stat">
+                <h2>End To End</h2>
+                <p>Software Delivery</p>
+            </div>
+        
+        </div>
+        
+    </section>
+            
+    
+    <!-- Experience -->
+    <section id="experience">
+        <div class="container"></div>
+
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="projects">
+
+    <div class="container">
+
+        <h2 class="section-title">Featured Enterprise Projects</h2>
+
+        <p class="section-subtitle">
+            Enterprise software implementation projects across Banking, FMCG, Distribution and Cloud Technologies.
+        </p>
+
+        <div class="project-grid">
+
+            <!-- Project 1 -->
+
+            <div class="project-card">
+
+                <h3>📦 Supply Chain Management System</h3>
+
+                <span class="tag">Project Management</span>
+                <span class="tag">ERP</span>
+
+                <p>
+                    Led enterprise software implementation for one of Myanmar's largest FMCG distributors,
+                    supporting over 700 users across multiple branches.
+                </p>
+
+                <ul>
+
+                    <li>✔ Managed project delivery</li>
+
+                    <li>✔ Gathered business requirements</li>
+
+                    <li>✔ Conducted UAT & training</li>
+
+                    <li>✔ Version Updates</li>
+
+                    <li>✔ Tableau reporting</li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- Project 2 -->
+
+            <div class="project-card">
+
+                <h3>🏦 Oracle FLEXCUBE Core Banking</h3>
+
+                <span class="tag">Banking</span>
+                <span class="tag">Oracle</span>
+
+                <p>
+                    Implemented Oracle FLEXCUBE Core Banking System while supporting business users,
+                    testing, issue resolution and production deployment.
+                </p>
+
+                <ul>
+
+                    <li>✔ Requirement analysis</li>
+
+                    <li>✔ User Acceptance Testing</li>
+
+                    <li>✔ Production Support</li>
+
+                    <li>✔ SQL troubleshooting</li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- Project 3 -->
+
+            <div class="project-card">
+
+                <h3>📊 Business Intelligence Dashboard</h3>
+
+                <span class="tag">Tableau</span>
+                <span class="tag">Analytics</span>
+
+                <p>
+                    Designed executive dashboards helping management monitor sales,
+                    inventory and operational performance.
+                </p>
+
+                <ul>
+
+                    <li>✔ Tableau Desktop</li>
+
+                    <li>✔ SQL </li>
+
+                    <li>✔ KPI Reporting</li>
+
+                </ul>
+
+                 <a href="#" class="project-btn">
+                View Details →
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+   
+</section>
+
+
+    <!-- Skills -->
+    <section id="skills" class="skills">
+
+    <div class="container">
+
+        <h2 class="section-title">Technical Skills</h2>
+
+        <p class="section-subtitle">
+            Technologies, tools and methodologies I've used throughout my career.
+        </p>
+
+        <div class="skills-grid">
+
+                <div class="skill-card">
+                    <h3>📋 Project Management</h3>
+    
+                    <ul>
+                        <li>Project Planning</li>
+                        <li>Software Implementation</li>
+                        <li>Stakeholder Management</li>
+                        <li>Risk Management</li>
+                        <li>Team Leadership</li>
+                    </ul>
+                </div>
+    
+                <div class="skill-card">
+                    <h3>📊 Business Analysis</h3>
+    
+                    <ul>
+                        <li>Requirements Gathering</li>
+                        <li>UAT</li>
+                        <li>Process Improvement</li>
+                        <li>Documentation</li>
+                        <li>Business Process Analysis</li>
+                    </ul>
+                </div>
+    
+                <div class="skill-card">
+                    <h3>💻 Technical Skills</h3>
+    
+                    <ul>
+                        <li>Microsoft SQL Server</li>
+                        <li>Oracle Database</li>
+                        <li>SQLite</li>
+                        <li>SQL</li>
+                        <li>IIS</li>
+                        <li>Java|HTML|CSS</li>
+                    </ul>
+                </div>
+    
+                <div class="skill-card">
+                    <h3>📈 Data Analytics</h3>
+    
+                    <ul>
+                        <li>Tableau Desktop</li>
+                        <li>Crystal Reports</li>
+                        <li>Excel</li>
+                    </ul>
+                </div>
+    
+            </div>
+    
+        </div>
+    
+    </section>
+
+    <!-- Certifications -->
+    <section id="certifications">
+        <div class="container"></div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <div class="container"></div>
+    </section>
+
+    <div class="social-links">
+
+     <a href="https://github.com/Nu-yinwin">
+        <i class="fab fa-github"></i>
+    </a>
+
+     <a href="https://www.linkedin.com/in/nu-yinwin">
+        <i class="fab fa-linkedin"></i>
+    </a>
+
+   <a href="mailto:juliawin2022@gmail.com">
+        <i class="fas fa-envelope"></i>
+    </a>
+
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+
+        <div class="container">
+        
+        <p>
+        © 2026 Nu Yin Win.
+        Built with HTML, CSS and ❤️.
+        </p>
+        
+        </div>
+        
+    </footer>
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
