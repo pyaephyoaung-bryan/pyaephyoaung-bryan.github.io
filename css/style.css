@@ -1,365 +1,1188 @@
-<!DOCTYPE html>
-<html lang="en">
-<script src="script.js"></script>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nu Yin Win</title>
+/* Google Font */
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+body{
+    font-family:'Poppins',sans-serif;
+    background:#F8F9FA;
+    color:#202124;
+    line-height:1.6;
+}
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
-</head>
+a{
+    text-decoration:none;
+}
 
-<body>
-   
+ul{
+    list-style:none;
+}
+
+img{
+    max-width:100%;
+}
+
+nav{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px 80px;
+
+    background:white;
+
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+}
+
+.logo{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:#4285F4;
+
+}
+
+nav ul{
+
+    display:flex;
+
+    gap:35px;
+
+}
+
+nav ul li a{
+
+    color:#202124;
+
+    font-weight:500;
+
+    transition:.3s;
+
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:0 auto;
+}
+
+nav ul li a:hover{
+    color:#4285F4;
+}
+
+.hero{
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding: 100px 0 60px;
+}
+
+.hero h1{
+    font-size:52px;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.hero h1 span{
+    color:#4285F4;
+}
+
+.hero p{
+    font-size:20px;
+    max-width:700px;
+    margin:auto;
+    color:#5f6368;
+}
+
+
+
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:12px 30px;
+    background:#4285F4;
+    color:white;
+    border-radius:30px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#3367D6;
+    transform:translateY(-3px);
+}
+
+@media(max-width:768px){
+
+    nav{
+        padding:20px;
+    }
+
+    nav ul{
+        gap:15px;
+    }
+
+    .hero h1{
+        font-size:36px;
+    }
+
+}
+
+.stats {
+    padding: 50px 0;
+    background: #f8f9fc;
+}
+
+.stats .container{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.stat{
+    background:white;
+    padding:30px;
+    text-align:center;
+    flex:1;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.stat h2{
+    font-size:40px;
+    color:#4285F4;
+}
+
+.stat p{
+    color:#5f6368;
+}
+
+#hero{
+    padding:80px 0;
+}
+
+.hero-content{
+    text-align:center;
+}
+
+.hero-content h1{
+    font-size:48px;
+    margin-top:20px;
+}
+
+.hero-content h2{
+    font-size:28px;
+    color:#4285F4;
+    margin:15px 0;
+}
+
+.description{
+    max-width:800px;
+    margin:20px auto;
+}
+
+/* ===========================
+   PROJECTS
+=========================== */
+
+.projects{
+
+    background:#f8f9fc;
+
+    padding:50px 0;
+
+}
+
+.section-title{
+
+    text-align:center;
+
+    font-size:40px;
+
+    margin-bottom:10px;
+
+}
+
+.section-subtitle{
+
+    text-align:center;
+
+    color:#666;
+
+    margin-bottom:60px;
+
+}
+
+.project-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:30px;
+
+}
+
+.project-card{
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:18px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.project-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 18px 40px rgba(0,0,0,.15);
+
+}
+
+.project-card h3{
+
+    color:#3d7bf5;
+
+    margin-bottom:18px;
+
+}
+
+.project-card p{
+
+    color:#555;
+
+    line-height:1.7;
+
+    margin:20px 0;
+
+}
+
+.project-card ul{
+
+    padding-left:18px;
+
+}
+
+.project-card li{
+
+    margin-bottom:12px;
+
+}
+
+.tag{
+
+    display:inline-block;
+
+    background:#e8f0ff;
+
+    color:#3d7bf5;
+
+    padding:6px 14px;
+
+    border-radius:50px;
+
+    font-size:13px;
+
+    margin-right:8px;
+
+    margin-top:5px;
+
+}
+
+/* ===========================
+   SKILLS
+=========================== */
+
+.skills{
+    padding:70px 0;
+    background:white;
+}
+
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+    margin-top:50px;
+}
+
+.skill-card{
+    background:#fff;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+    transition:.3s;
+}
+
+.skill-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+
+.skill-card h3{
+    color:#3d7bf5;
+    margin-bottom:20px;
+}
+
+.skill-card ul{
+    list-style:none;
+    padding:0;
+}
+
+.skill-card li{
+    padding:8px 0;
+    border-bottom:1px solid #eee;
+}
+
+.skill-card li:last-child{
+    border-bottom:none;
+}
+
+footer{
+
+background:#111;
+
+color:white;
+
+text-align:center;
+
+padding:30px;
+
+margin-top:80px;
+
+}
+html{
+
+scroll-behavior:smooth;
+
+}
+
+@media(max-width:768px){
+
+.hero{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.hero img{
+
+margin-top:40px;
+
+width:250px;
+
+}
+
+.project-grid,
+.skills-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.stats-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+.skills{
+    padding:50px 0;
+    background:#f8f9fc;
+}
+
+.project-btn{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    color:#3d7bf5;
+
+    font-weight:600;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.project-btn:hover{
+
+    transform:translateX(6px);
+
+}
+
+.projects{
+
+    padding:50px 0;
+
+}
+
+.skills{
+
+    padding:100px 0;
+
+}
+
+.project-btn{
+
+    display:inline-block;
+
+    margin-top:25px;
+
+    padding:10px 22px;
+
+    background:#3d7bf5;
+
+    color:white;
+
+    border-radius:30px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.project-btn:hover{
+
+    background:#2f67d8;
+
+    transform:translateY(-2px);
+
+}
+
+.about p{
+
+    max-width:850px;
+
+    line-height:1.8;
+
+}
+
+.social-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.social-links a{
+    font-size: 28px;
+    color: #3d7bf5;
+    transition: 0.3s;
+}
+
+.social-links a:hover{
+    color: #1d4ed8;
+    transform: translateY(-3px);
+}
+
+
+
+
+/* ABOUT ME CSS FILE */
+
+/* ================= ABOUT PAGE ================= */
+
+.about-hero{
+
+    padding:130px 20px 90px;
+    background:#f8f9fc;
+    text-align:center;
+
+}
+
+.profile-image{
+
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    object-fit:cover;
+    border:6px solid white;
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+}
+
+.about-hero h1{
+
+    font-size:50px;
+    margin-top:25px;
+
+}
+
+.about-hero p{
+
+    color:#666;
+    font-size:20px;
+
+}
+
+.about-story{
+
+    padding:100px 20px;
+
+}
+
+.about-story h2{
+
+    text-align:center;
+    margin-bottom:40px;
+    font-size:42px;
+
+}
+
+.about-story p{
+
+    max-width:900px;
+    margin:auto;
+    line-height:2;
+    text-align:justify;
+
+}
+
+/* Gallery */
+
+.gallery{
+
+    background:#f8f9fc;
+    padding:100px 20px;
+
+}
+
+.gallery h2{
+
+    text-align:center;
+    margin-bottom:60px;
+    font-size:42px;
+
+}
+
+.gallery-grid{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+
+}
+
+.gallery-card{
+
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+    transition:.3s;
+
+}
+
+.gallery-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.gallery-card img{
+
+    width:100%;
+    height:260px;
+    object-fit:cover;
+
+}
+
+.gallery-card h3{
+
+    padding:20px 20px 10px;
+
+}
+
+.gallery-card p{
+
+    padding:0 20px 20px;
+
+}
+
+/* Belief */
+
+.belief{
+
+    padding:100px 20px;
+
+}
+
+.belief h2{
+
+    text-align:center;
+    margin-bottom:60px;
+    font-size:42px;
+
+}
+
+.belief-grid{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+
+}
+
+.belief-card{
+
+    background:white;
+    border-radius:20px;
+    padding:35px;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+    transition:.3s;
+
+}
+
+.belief-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+/* Quote */
+
+.quote-section{
+
+    background:#3d7bf5;
+    color:white;
+    padding:100px 20px;
+    text-align:center;
+
+}
+
+.quote-section blockquote{
+
+    max-width:900px;
+    margin:auto;
+    font-size:28px;
+    line-height:1.8;
+    font-style:italic;
+
+}
+
+/* =======================
+   Vertical Timeline For Experience.html
+======================= */
+
+.career{
+
+    padding:100px 20px;
+
+}
+
+.section-header{
+
+    text-align:center;
+    margin-bottom:80px;
+
+}
+
+.section-header h1{
+
+    font-size:48px;
+    margin-bottom:20px;
+
+}
+
+.section-header p{
+
+    color:#666;
+    max-width:700px;
+    margin:auto;
+
+}
+
+.timeline{
+
+    position:relative;
+    max-width:1100px;
+    margin:auto;
+
+}
+
+.timeline::before{
+
+    content:"";
+    position:absolute;
+
+    left:50%;
+    top:0;
+    width:4px;
+    height:100%;
+
+    background:#3d7bf5;
+
+    transform:translateX(-50%);
+
+}
+
+.timeline-item{
+
+    width:50%;
+    padding:20px 40px;
+    position:relative;
+
+}
+
+.timeline-item.left{
+
+    left:0;
+
+}
+
+.timeline-item.right{
+
+    left:50%;
+
+}
+
+.timeline-item::before{
+
+    content:"";
+    position:absolute;
+
+    top:45px;
+    width:22px;
+    height:22px;
+
+    border-radius:50%;
+
+    background:#3d7bf5;
+
+    border:5px solid white;
+
+    box-shadow:0 0 10px rgba(0,0,0,.15);
+
+}
+
+.timeline-item.left::before{
+
+    right:-13px;
+
+}
+
+.timeline-item.right::before{
+
+    left:-13px;
+
+}
+
+.timeline-content{
+
     
-    <!-- Navigation -->
-    <nav>
-        <div class="container">
-        <div class="logo">
-            Nu Yin Win
-        </div>
     
-        <ul>
-    
-            <li><a href="index.html">Home</a></li>
-    
-            <li><a href="about.html">About Me</a></li>
-    
-            <li><a href="experience.html">Experience</a></li>
-    
-            <li><a href="projects.html">Projects</a></li>
-
-            <li><a href="volunteer.html">Volunteer</a></li>
-    
-            <li><a href="certifications.html">Certifications</a></li>
-    
-            <li><a href="contact.html">Contact</a></li>
-    
-        </ul>
-        </div>
-    </nav>
-
-    <!-- Hero -->
-    <section id="hero">
-
-    <div class="container">
-
-    <div class="hero-content">
-    
-           <div class="profile-image">
-
-            <img src="images/profile3.png" alt="Nu Yin Win">
-            
-            </div>
-    
-            <h1>Hi, I'm Nu Yin Win (Julia) 👋</h1>
-    
-            <h2>IT Project Manager | Business Analyst | Enterprise Software Implementation</h2>
-    
-           <p class="tagline">
-            From Vision to Delivery.
-            </p>
-            
-            <p class="description">
-            Results-driven IT professional with 9+ years of experience in enterprise software implementation, business analysis, and project delivery. 
-            
-            </p>
-    
-            <a class="btn"
-               href="documents/nuyinwinResume.pdf"
-               target="_blank"
-               download>
-               View My Resume
-            </a>
-            
-            <a class="btn secondary" href="#projects">
-            Explore Projects
-            </a>
-    
-        </div>
-
-    </div>
-    
-    </section>
-
-    <!-- About -->
-    <section id="about">
-        <div class="container">
-
-        <h2>About Me</h2>
-        
-        <p>
-        Currently serving as an Auxiliary Police Officer in Singapore while continuously strengthening my technical skills and preparing to return to enterprise IT.
-        My career has taken me from software development to IT management, where I successfully delivered enterprise software projects across banking, FMCG, and distribution industries in Myanmar and Cambodia.
-
-        I enjoy solving complex business problems, working with stakeholders, and turning ideas into practical technology solutions. I believe continuous learning, resilience, and a genuine desire to help others are the foundations of long-term success.  
-        
-        </p>
-        
-        </div>
-    </section>
-
-    <section class="stats">
-
-        <div class="container">
-        
-            <div class="stat">
-                <h2>9+</h2>
-                <p>Years Experience</p>
-            </div>
-        
-            <div class="stat">
-                <h2>7+</h2>
-                <p>Enterprise Clients</p>
-            </div>
-        
-            <div class="stat">
-                <h2>900+</h2>
-                <p>Users Supported</p>
-            </div>
-        
-            <div class="stat">
-                <h2>End To End</h2>
-                <p>Software Delivery</p>
-            </div>
-        
-        </div>
-        
-    </section>
-            
-    
-    <!-- Experience -->
-    <section id="experience">
-        <div class="container"></div>
+    background:white;
 
-    </section>
+    border-radius:18px;
 
-    <!-- Projects -->
-    <section id="projects" class="projects">
+    overflow:hidden;
 
-    <div class="container">
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
 
-        <h2 class="section-title">Featured Enterprise Projects</h2>
+    transition:.35s;
 
-        <p class="section-subtitle">
-            Enterprise software implementation projects across Banking, FMCG, Distribution and Cloud Technologies.
-        </p>
+}
 
-        <div class="project-grid">
+.timeline-content:hover{
 
-            <!-- Project 1 -->
+    transform:translateY(-8px);
 
-            <div class="project-card">
+}
 
-                <h3>📦 Supply Chain Management System</h3>
+.timeline-content{
 
-                <span class="tag">Project Management</span>
-                <span class="tag">ERP</span>
+    background:rgba(255,255,255,.85);
 
-                <p>
-                    Led enterprise software implementation for one of Myanmar's largest FMCG distributors,
-                    supporting over 700 users across multiple branches.
-                </p>
+    backdrop-filter:blur(15px);
 
-                <ul>
+    border:1px solid rgba(255,255,255,.4);
 
-                    <li>✔ Managed project delivery</li>
+    border-radius:20px;
 
-                    <li>✔ Gathered business requirements</li>
+    box-shadow:0 20px 40px rgba(0,0,0,.08);
 
-                    <li>✔ Conducted UAT & training</li>
+}
 
-                    <li>✔ Version Updates</li>
+.timeline-content img{
 
-                    <li>✔ Tableau reporting</li>
+    object-fit:cover;
+    display:block;
 
-                </ul>
+}
 
-            </div>
+.timeline-content:hover img{
 
+    transform:scale(1.08);
 
-            <!-- Project 2 -->
+}
 
-            <div class="project-card">
+.timeline-content .text{
 
-                <h3>🏦 Oracle FLEXCUBE Core Banking</h3>
+    padding:25px;
 
-                <span class="tag">Banking</span>
-                <span class="tag">Oracle</span>
+}
 
-                <p>
-                    Implemented Oracle FLEXCUBE Core Banking System while supporting business users,
-                    testing, issue resolution and production deployment.
-                </p>
+.date{
 
-                <ul>
+    color:#3d7bf5;
 
-                    <li>✔ Requirement analysis</li>
+    font-weight:600;
 
-                    <li>✔ User Acceptance Testing</li>
+}
 
-                    <li>✔ Production Support</li>
+.timeline-content h2{
 
-                    <li>✔ SQL troubleshooting</li>
+    margin:10px 0;
 
-                </ul>
+}
 
-            </div>
+.timeline-content h4{
 
+    color:#666;
 
-            <!-- Project 3 -->
+    margin-bottom:20px;
 
-            <div class="project-card">
+}
 
-                <h3>📊 Business Intelligence Dashboard</h3>
+.timeline-content p{
 
-                <span class="tag">Tableau</span>
-                <span class="tag">Analytics</span>
+    line-height:1.8;
 
-                <p>
-                    Designed executive dashboards helping management monitor sales,
-                    inventory and operational performance.
-                </p>
+}
 
-                <ul>
+/* ============================
+   SCROLL ANIMATION
+============================ */
 
-                    <li>✔ Tableau Desktop</li>
+.hidden{
 
-                    <li>✔ SQL </li>
+    opacity:0;
+    filter:blur(5px);
+    transform:translateY(60px);
+    transition:all 0.8s ease;
 
-                    <li>✔ KPI Reporting</li>
+}
 
-                </ul>
+.show{
 
-                 <a href="#" class="project-btn">
-                View Details →
-                </a>
+    opacity:1;
+    filter:blur(0);
+    transform:translateY(0);
 
-            </div>
+}
 
-        </div>
+/* Left */
 
-    </div>
-   
-</section>
+.timeline-item.left{
 
+    transform:translateX(-80px);
 
-    <!-- Skills -->
-    <section id="skills" class="skills">
+}
 
-    <div class="container">
+.timeline-item.left.show{
 
-        <h2 class="section-title">Technical Skills</h2>
+    transform:translateX(0);
 
-        <p class="section-subtitle">
-            Technologies, tools and methodologies I've used throughout my career.
-        </p>
+}
 
-        <div class="skills-grid">
+/* Right */
 
-                <div class="skill-card">
-                    <h3>📋 Project Management</h3>
-    
-                    <ul>
-                        <li>Project Planning</li>
-                        <li>Software Implementation</li>
-                        <li>Stakeholder Management</li>
-                        <li>Risk Management</li>
-                        <li>Team Leadership</li>
-                    </ul>
-                </div>
-    
-                <div class="skill-card">
-                    <h3>📊 Business Analysis</h3>
-    
-                    <ul>
-                        <li>Requirements Gathering</li>
-                        <li>UAT</li>
-                        <li>Process Improvement</li>
-                        <li>Documentation</li>
-                        <li>Business Process Analysis</li>
-                    </ul>
-                </div>
-    
-                <div class="skill-card">
-                    <h3>💻 Technical Skills</h3>
-    
-                    <ul>
-                        <li>Microsoft SQL Server</li>
-                        <li>Oracle Database</li>
-                        <li>SQLite</li>
-                        <li>SQL</li>
-                        <li>IIS</li>
-                        <li>Java|HTML|CSS</li>
-                    </ul>
-                </div>
-    
-                <div class="skill-card">
-                    <h3>📈 Data Analytics</h3>
-    
-                    <ul>
-                        <li>Tableau Desktop</li>
-                        <li>Crystal Reports</li>
-                        <li>Excel</li>
-                    </ul>
-                </div>
-    
-            </div>
-    
-        </div>
-    
-    </section>
+.timeline-item.right{
 
-    <!-- Certifications -->
-    <section id="certifications">
-        <div class="container"></div>
-    </section>
+    transform:translateX(80px);
 
-    <!-- Contact -->
-    <section id="contact">
-        <div class="container"></div>
-    </section>
+}
 
-    <div class="social-links">
+.timeline-item.right.show{
 
-     <a href="https://github.com/Nu-yinwin">
-        <i class="fab fa-github"></i>
-    </a>
+    transform:translateX(0);
 
-     <a href="https://www.linkedin.com/in/nu-yinwin">
-        <i class="fab fa-linkedin"></i>
-    </a>
+}
 
-   <a href="mailto:juliawin2022@gmail.com">
-        <i class="fas fa-envelope"></i>
-    </a>
+/* ===========================
+   SLIDESHOW
+=========================== */
 
-    </div>
-    
-    <!-- Footer -->
-    <footer>
+.slideshow{
 
-        <div class="container">
-        
-        <p>
-        © 2026 Nu Yin Win.
-        Built with HTML, CSS and ❤️.
-        </p>
-        
-        </div>
-        
-    </footer>
+    position:relative;
 
-    <script src="js/main.js"></script>
+    overflow:hidden;
 
-</body>
+}
 
-</html>
+.slides{
+
+    display:none;
+
+}
+
+.slides img{
+
+    width:100%;
+
+    height:280px;
+
+    object-fit:cover;
+
+}
+
+.prev,
+.next{
+
+    cursor:pointer;
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:white;
+
+    font-size:28px;
+
+    font-weight:bold;
+
+    padding:12px;
+
+    background:rgba(0,0,0,.35);
+
+    transition:.3s;
+
+    user-select:none;
+
+}
+
+.prev{
+
+    left:0;
+
+}
+
+.next{
+
+    right:0;
+
+}
+
+.prev:hover,
+.next:hover{
+
+    background:rgba(0,0,0,.65);
+
+}
+
+.dots{
+
+    position:absolute;
+
+    bottom:15px;
+
+    width:100%;
+
+    text-align:center;
+
+}
+
+.dot{
+
+    height:12px;
+
+    width:12px;
+
+    margin:0 4px;
+
+    display:inline-block;
+
+    border-radius:50%;
+
+    background:#ddd;
+
+    cursor:pointer;
+
+}
+
+.active-dot{
+
+    background:white;
+
+}
+
+.fade{
+
+    animation:fade .8s;
+
+}
+
+@keyframes fade{
+
+    from{
+
+        opacity:.3;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+.profile-image{
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    overflow:hidden;
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+
+.profile-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center top;
+    display:block;
+}
+
+
+
+.certifications{
+
+    padding:90px 0;
+
+}
+
+.cert-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:35px;
+
+    margin-top:60px;
+
+}
+
+.cert-card{
+    background:#fff;
+    border-radius:22px;
+    padding:35px;
+    text-align:center;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+    border-top:6px solid #3b82f6;
+
+    transition:.35s;
+}
+
+.cert-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 25px 45px rgba(0,0,0,.15);
+}
+
+.cert-card img{
+
+    width:90px;
+
+    height:90px;
+
+    object-fit:contain;
+
+    margin-bottom:20px;
+}
+
+.cert-card h3{
+
+    font-size:24px;
+
+    margin-bottom:10px;
+
+}
+
+.cert-card span{
+
+    color:#3b82f6;
+
+    font-weight:600;
+
+    display:block;
+
+    margin-bottom:10px;
+
+}
+
+.cert-card p{
+
+    color:#666;
+
+}
+
+.badge{
+
+     display: inline-block;
+    background: #dbeafe;
+    color: #2563eb;
+    padding: 6px 18px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    width: 115px;
+    margin: 12px auto;
+}
+
+.credential-link{
+    display:inline-block;
+    margin-top:15px;
+    color:#2563eb;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.credential-link:hover{
+    color:#1d4ed8;
+    text-decoration:underline;
+}
+
+.credential-link i{
+    margin-right:6px;
+}
